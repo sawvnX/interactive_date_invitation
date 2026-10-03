@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Little Date 💕</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts" id="hearts"></div>
+
+
+    <!-- =========================================
+         SCREEN 1 — WILL YOU GO OUT WITH ME?
+    ========================================== -->
+
+    <main class="screen active" id="questionScreen">
+
+        <div class="cat-card">
+            <img
+                id="questionCat"
+                src="assets/cat_asking.png"
+                alt="Cute pixel cat"
+            >
+        </div>
+
+        <h1 id="question">
+            WILL YOU GO OUT<br>
+            WITH ME?
+        </h1>
+
+        <p class="message" id="message"></p>
+
+        <div class="buttons">
+
+            <button
+                id="yesBtn"
+                class="pixel-btn yes"
+            >
+                YES
+            </button>
+
+            <button
+                id="noBtn"
+                class="pixel-btn"
+            >
+                NO
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         SCREEN 2 — PICK A DATE
+    ========================================== -->
+
+    <main class="screen" id="dateScreen">
+
+        <div class="cat-card">
+
+            <img
+                src="assets/cat_happy.png"
+                alt="Happy pixel cat"
+            >
+
+        </div>
+
+        <h1>
+            PICK A DATE
+        </h1>
+
+        <p class="subtitle">
+            Choose the day for our cute little plan 💕
+        </p>
+
+        <div class="date-box">
+
+            <input
+                type="date"
+                id="dateInput"
+            >
+
+        </div>
+
+        <button
+            id="dateNextBtn"
+            class="lock-btn"
+            disabled
+        >
+            NEXT →
+        </button>
+
+    </main>
+
+
+    <!-- =========================================
+         SCREEN 3 — WHAT WOULD YOU LIKE TO DO?
+    ========================================== -->
+
+    <main class="screen" id="activityScreen">
+
+        <div class="cat-card">
+
+            <img
+                src="assets/cat_asking.png"
+                alt="Cute pixel cat"
+            >
+
+        </div>
+
+        <h1>
+            WHAT WOULD YOU<br>
+            LIKE TO DO?
+        </h1>
+
+        <p class="subtitle">
+            Pick something fun for our date 💗
+        </p>
+
+
+        <div class="activities">
+
+            <button
+                class="activity-btn"
+                data-activity="DINNER DATE"
+            >
+                🍝 DINNER DATE
+            </button>
+
+            <button
+                class="activity-btn"
+                data-activity="MOVIE NIGHT"
+            >
+                🎬 MOVIE NIGHT
+            </button>
+
+            <button
+                class="activity-btn"
+                data-activity="COFFEE & WALK"
+            >
+                ☕ COFFEE & WALK
+            </button>
+
+            <button
+                class="activity-btn"
+                data-activity="PICNIC"
+            >
+                🧺 PICNIC
+            </button>
+
+            <button
+                class="activity-btn"
+                data-activity="MINI GOLF"
+            >
+                ⛳ MINI GOLF
+            </button>
+
+            <button
+                class="activity-btn"
+                data-activity="SURPRISE ME"
+            >
+                🎁 SURPRISE ME
+            </button>
+
+        </div>
+
+
+        <button
+            id="lockBtn"
+            class="lock-btn"
+            disabled
+        >
+            LOCK IT IN 🔒
+        </button>
+
+    </main>
+
+
+    <!-- =========================================
+         SCREEN 4 — FINAL DATE
+    ========================================== -->
+
+    <main
+        class="screen final-screen"
+        id="finalScreen"
+    >
+
+        <div class="couple-card">
+
+            <img
+                id="coupleImage"
+                src="assets/cat_couple.png"
+                alt="Cute cat couple"
+                onerror="this.src='assets/cat_happy.png'"
+            >
+
+        </div>
+
+
+        <h1>
+            IT'S A DATE! 💕
+        </h1>
+
+
+        <div class="date-result">
+
+            <p>
+
+                <span>DATE:</span>
+
+                <strong
+                    id="finalDate"
+                ></strong>
+
+            </p>
+
+
+            <p>
+
+                <span>ACTIVITY:</span>
+
+                <strong
+                    id="finalActivity"
+                ></strong>
+
+            </p>
+
+        </div>
+
+
+        <p class="final-message">
+            Can't wait to spend this day with you! 💗
+        </p>
+
+
+        <button
+            id="loveNoteBtn"
+            class="lock-btn love-note-btn"
+        >
+            💌 OPEN MY LOVE NOTE
+        </button>
+
+    </main>
+
+
+    <!-- =========================================
+         LOVE NOTE POPUP
+    ========================================== -->
+
+    <div
+        class="love-overlay"
+        id="loveOverlay"
+    >
+
+        <div class="love-note">
+
+
+            <!-- Close Button -->
+
+            <button
+                class="close-note"
+                id="closeNote"
+                aria-label="Close love note"
+            >
+                ×
+            </button>
+
+
+            <!-- Heart -->
+
+            <div class="letter-heart">
+                💗
+            </div>
+
+
+            <!-- Title -->
+
+            <h2>
+                For You, My Love 💌
+            </h2>
+
+
+            <!-- Letter -->
+
+            <div class="letter-content">
+
+                <p>
+                    Hey love,
+                </p>
+
+
+                <p>
+                    I just wanted to make this little
+                    surprise for you because you are
+                    someone really special to me.
+                </p>
+
+
+                <p>
+                    Every moment with you feels a little
+                    more beautiful, and I hope we get to
+                    make many more cute memories together.
+                </p>
+
+
+                <p>
+                    So this isn't just a date...
+                    it's another little memory I want us
+                    to keep forever. ❤️
+                </p>
+
+
+                <p>
+                    I can't wait to see you, laugh with you,
+                    and spend some beautiful time together.
+                </p>
+
+
+                <!-- Signature -->
+
+                <div class="signature">
+
+                    With all my love,<br>
+
+                    <strong>
+                        Sawan Kumar ❤️
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <div class="letter-footer">
+                Made just for you 💕
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
